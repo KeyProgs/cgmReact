@@ -1,12 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import './css/index.css';
+import Login from './js/Login';
 import reportWebVitals from './reportWebVitals';
+import {BrowserRouter,Switch, Route} from 'react-router-dom';
+
+import Friends from './js/Friends'
+import Timer from './js/Timer'
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+  <BrowserRouter>
+  <Switch>
+    {/* <Route path='/test' component={Login}></Route>
+    <Route path='/' component={Login}></Route>
+    <Route path='/friends' component={Friends}></Route>
+    <Route path='/filterr/:filterr' component={Friends}></Route> */}
+    <Route path='/timer' component={Timer}></Route>
+  </Switch>
+  </BrowserRouter>
+  
   </React.StrictMode>,
   document.getElementById('root')
 );
